@@ -127,7 +127,7 @@ public class prima {
         }
         final prima p = new prima();
         prima = p.calcularPrima(edad, puntos);
-        System.out.println("Usted debe pagar " + prima + " por su prima.");
+        System.out.println("Usted debe pagar $" + prima + " por su prima.");
     }
     
 }
