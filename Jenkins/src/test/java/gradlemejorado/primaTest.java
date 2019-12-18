@@ -19,5 +19,11 @@ public class primaTest {
 	public void testCalcularPrima2() {
 		assertEquals(p.calcularPrima(28,12),500,0);
 	}
+	
+	//Debe fallar
+		@Test
+		public void testCalcularPrima3() {
+			assertEquals(p.calcularPrima(50,2),500,0);
+	}
 
 }
