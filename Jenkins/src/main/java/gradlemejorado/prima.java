@@ -42,7 +42,8 @@ public class prima {
     * @author Miguel Murillo
     */
   
-    public String calcularPrima(int edad,  final int puntos, int prima) {
+    public float calcularPrima(int edad,  int puntos) {
+    	float prima = 0;
         if (edad >= 18 && edad < 25) {
             if (puntos >= 29) {
                 prima = (int) (500 * 2.8 - 50);
@@ -78,7 +79,7 @@ public class prima {
                 prima = (int) (500 * 1.5);
             }
         }
-        return "Usted debe pagar " + prima + " por su prima.";
+        return prima;
     }
     
 
@@ -90,7 +91,7 @@ public class prima {
     public static void main(String[] args) {
         String edads = null;
         int puntos = 0;
-        final int prima = 0;
+        float prima = 0;
         int edad = 0;
         String puntoss = null;
         lector = new Scanner(System.in);
@@ -125,7 +126,8 @@ public class prima {
             }
         }
         final prima p = new prima();
-        System.out.println(p.calcularPrima(edad,puntos,prima));
+        prima = p.calcularPrima(edad, puntos);
+        System.out.println("Usted debe pagar " + prima + " por su prima.");
     }
     
 }
